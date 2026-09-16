@@ -36,3 +36,13 @@ Then open http://localhost:5000 in your browser.
 
 - Supported file types: `.pdf`, `.docx` (max 5 MB).
 - Scanned/image-only PDFs won't extract text — use a text-based resume.
+
+## Troubleshooting
+
+**`ModuleNotFoundError` after `pip install`** — if `pip install -r requirements.txt`
+printed a build error partway through, one of the packages likely failed to
+install and the rest never ran. Always use a clean virtual environment
+(as in Setup above) rather than installing into a conda `base` environment
+or a system Python, which are more likely to have conflicting packages.
+Then re-run `pip install -r requirements.txt` and check the full output for
+which package failed.
