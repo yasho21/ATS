@@ -32,6 +32,14 @@ python app.py
 
 Then open http://localhost:5000 in your browser.
 
+On macOS, port 5000 is often taken by the AirPlay Receiver. If you see
+"Address already in use", either disable AirPlay Receiver in
+System Settings → General → AirDrop & Handoff, or run on a different port:
+
+```bash
+PORT=5001 python app.py
+```
+
 ## Notes
 
 - Supported file types: `.pdf`, `.docx` (max 5 MB).
